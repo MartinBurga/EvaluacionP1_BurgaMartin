@@ -16,6 +16,8 @@ namespace EvaluacionP1_BurgaMartin.Models
         public DateOnly FechaPago { get; set; }
         [Required]
         public double Monto { get; set; }
+
+
        
 
     }
