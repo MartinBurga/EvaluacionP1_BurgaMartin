@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EvaluacionP1_BurgaMartin.Models
 {
     public class PlanRecompensas
     {
-
         [Key]
         [Required]
         public int IdPlan { get; set; }
@@ -26,6 +26,7 @@ namespace EvaluacionP1_BurgaMartin.Models
             }
         }
         public int IdCliente { get; set; }
+        [ForeignKey("IdCliente")]
         public Cliente cliente { get; set; }
     }
 }
