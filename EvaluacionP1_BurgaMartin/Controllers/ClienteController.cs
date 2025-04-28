@@ -3,27 +3,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EvaluacionP1_BurgaMartin.Controllers
 {
-    public class EstudianteController : Controller
+    public class ClienteController : Controller
     {
-        // GET: EstudianteController
+        // GET: ClienteController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: EstudianteController/Details/5
+        // GET: ClienteController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: EstudianteController/Create
+        // GET: ClienteController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: EstudianteController/Create
+        // POST: ClienteController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -38,13 +38,13 @@ namespace EvaluacionP1_BurgaMartin.Controllers
             }
         }
 
-        // GET: EstudianteController/Edit/5
+        // GET: ClienteController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: EstudianteController/Edit/5
+        // POST: ClienteController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -59,13 +59,13 @@ namespace EvaluacionP1_BurgaMartin.Controllers
             }
         }
 
-        // GET: EstudianteController/Delete/5
+        // GET: ClienteController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: EstudianteController/Delete/5
+        // POST: ClienteController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
@@ -79,5 +79,10 @@ namespace EvaluacionP1_BurgaMartin.Controllers
                 return View();
             }
         }
+        public IActionResult Detalles()
+        {
+            return View();
+        }
+        
     }
 }
