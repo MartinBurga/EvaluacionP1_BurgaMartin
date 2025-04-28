@@ -24,6 +24,7 @@ namespace EvaluacionP1_BurgaMartin.Repository
             cliente2.Monto = 200.75;
             clientes.Add(cliente2);
 
+            return clientes;
 
         }
     }
