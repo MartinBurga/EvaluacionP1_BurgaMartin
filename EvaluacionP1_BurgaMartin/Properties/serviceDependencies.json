@@ -7,6 +7,10 @@
     "mssql2": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:EvaluacionP1_SQL_PlanRecompensas"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:EvaluacionP1_SQL_Reservas"
     }
   }
 }
