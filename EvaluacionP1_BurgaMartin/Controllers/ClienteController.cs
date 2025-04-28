@@ -1,10 +1,20 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EvaluacionP1_BurgaMartin.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Core.Types;
 
 namespace EvaluacionP1_BurgaMartin.Controllers
 {
     public class ClienteController : Controller
     {
+        private readonly ClienteRepository _clienteRepository;
+
+        // Constructor to inject the ClienteRepository dependency
+        public ClienteController(ClienteRepository clienteRepository)
+        {
+            _clienteRepository = clienteRepository;
+        }
+
         // GET: ClienteController
         public ActionResult Index()
         {
@@ -14,7 +24,8 @@ namespace EvaluacionP1_BurgaMartin.Controllers
         // GET: ClienteController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var cliente = _clienteRepository.DevuelveClientes().FirstOrDefault(c => c.Id == id);
+            return View(cliente); // Pass the cliente object to the view
         }
 
         // GET: ClienteController/Create
@@ -79,10 +90,10 @@ namespace EvaluacionP1_BurgaMartin.Controllers
                 return View();
             }
         }
+
         public IActionResult Detalles()
         {
             return View();
         }
-        
     }
 }
