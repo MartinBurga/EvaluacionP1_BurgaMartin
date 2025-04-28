@@ -11,8 +11,9 @@ namespace EvaluacionP1_BurgaMartin.Models
         public int ValorPago { get; set; }
         public DateOnly FechaEntrada { get; set; }
         public DateOnly FechaSalida { get; set; }
+        public int IdCliente { get; set; }
 
-        [ForeignKey("Cliente")]
+        [ForeignKey("IdCliente")]
         public Cliente cliente { get; set; }
     }
 }
