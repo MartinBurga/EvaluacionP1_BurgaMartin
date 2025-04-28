@@ -3,6 +3,10 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:EvaluacionP1_SQLserver"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:EvaluacionP1_SQL_PlanRecompensas"
     }
   }
 }

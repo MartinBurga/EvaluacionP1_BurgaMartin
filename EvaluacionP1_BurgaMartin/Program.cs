@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using EvaluacionP1_BurgaMartin.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<EvaluacionP1_SQL_PlanRecompensas>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EvaluacionP1_SQL_PlanRecompensas") ?? throw new InvalidOperationException("Connection string 'EvaluacionP1_SQL_PlanRecompensas' not found.")));
 builder.Services.AddDbContext<EvaluacionP1_SQLserver>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EvaluacionP1_SQLserver") ?? throw new InvalidOperationException("Connection string 'EvaluacionP1_SQLserver' not found.")));
 
